@@ -1,0 +1,43 @@
+<article class="{{post_class}} item col-3">
+    {{#if feature_image}}
+    <div class="article-image">
+        <figure>
+            <img
+                src="{{img_url feature_image}}"
+                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+            />
+        </figure>
+    </div>
+    {{/if}}
+                
+    <div class="post-card item">
+        <div class="columns">
+            <h1 class="item"><a href="{{url}}">{{title}}</a></a></h1>      
+            <time class="post-date item" datetime="{{date format='YYYY-MM-DD'}}">
+                {{date format="DD.MM.YYYY"}}
+            </time>
+        </div>
+        <hr />
+
+        <div class="columns author">
+            {{#foreach authors}}
+                {{#if profile_image}}
+                    <img class="profile-image item" src="{{img_url profile_image}}" alt="{{name}}'s Picture">
+                {{/if}}
+                    <section class="item"><strong>{{name}}</strong></section>
+            {{/foreach}}
+        </div>
+        
+        <section class="columns">
+            <strong class="item">Tehty: </strong>Millä tehty?
+        </section>
+
+        <div class="price">
+        <hr />
+        
+        <section>
+            <strong>Hinta tulee tähän</strong>
+        </section>
+        </div>
+    </div>
+</article>

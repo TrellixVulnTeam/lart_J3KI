@@ -1,0 +1,10 @@
+{{!< default}}
+<main class="container">
+    <h2>Jatkuva näyttely</h2>
+    <div class="columns">
+        {{#foreach posts}}
+            {{> post_card}}
+        {{/foreach}}
+    </div>
+    <h2 id="bye">Kiitos käynnistä!</h2>
+</main>
