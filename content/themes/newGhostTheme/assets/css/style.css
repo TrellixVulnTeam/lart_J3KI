@@ -214,6 +214,15 @@ h2#bye{
     height: 340px;
 }
 
-@media all and (max-width: 1240px){
+.gh-portal-triggerbtn-iframe{
+    display: none;
+}
 
+@media all and (max-width: 1120px){
+    .col-3{
+        width: calc(50% - 20px);
+    }
+}
+
+@media all and (max-width: 900px){
 }
