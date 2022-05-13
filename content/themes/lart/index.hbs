@@ -1,0 +1,44 @@
+{{!< default}}
+<main class="container">
+    <h2>Jatkuva näyttely</h2>
+    <div class="columns">
+        {{#foreach posts}}
+            {{> post_card}}
+        {{/foreach}}
+    </div>
+</main>
+
+{{!-- Modal --}}
+<div id="modal" class="modal">
+    <button data-close-button class="close-btn db-mobile"><img src="assets/images/close.svg"></button>
+    <div class="columns">
+        <div class="col-2">
+            <div class="modal-image">
+            </div>        
+        </div>
+        <div class="col-2 border">
+            <div class="columns">
+                <h2 class="modal-title item"></h2>
+                <time class="post-date item" datetime="{{date format='YYYY-MM-DD'}}"></time>
+            </div>
+            <hr />
+
+            <div class="post-card-meta item"></div>
+
+            <section class="columns done">
+                <strong>Tehty: </strong>
+                <section>Ei tiedossa</section>
+            </section>
+            
+            <p class="modal-content"><strong>Taiteilijan ajatukset: </strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam laoreet sodales sapien id suscipit. Aliquam interdum metus elit, eget malesuada magna aliquet quis. Duis lectus tortor, lacinia nec odio at, mollis pulvinar libero. Integer interdum tempor dictum. Etiam porttitor eleifend massa, non dapibus lacus sollicitudin porta. Vestibulum non bibendum arcu, ac interdum urna. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+            
+            <div class="price">
+                <hr />   
+                    <section><strong>Hinta tulee tähän</strong></section>
+                </div>
+            </div>
+        <button data-close-button class="close-btn"><img src="assets/images/close.svg"></button>
+    </div>
+</div>
+
+<div id="overlay"></div>
